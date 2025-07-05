@@ -1,54 +1,54 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* small.css */
 
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
+  background-color: #fff;
   color: #333;
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
 }
 
-.logo svg {
-  fill: #fff;
+header img {
+  height: 40px;
 }
 
-.hamburger {
-  font-size: 1.5rem;
+#hamburgerBtn {
   background: none;
   border: none;
+  font-size: 2rem;
   color: #fff;
   cursor: pointer;
-  display: block;
 }
 
 nav {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  background-color: #444;
 }
 
 nav.open {
-  display: block;
+  display: flex;
 }
 
-.nav-links {
-  list-style: none;
-}
-
-.nav-links li a {
+nav a {
   color: #fff;
   text-decoration: none;
-  display: block;
-  padding: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #555;
+}
+
+nav a:hover {
+  background-color: #555;
 }
 
 main {
@@ -59,42 +59,44 @@ section {
   margin-bottom: 2rem;
 }
 
-h1, h2 {
-  margin-bottom: 1rem;
-}
-
-img {
+img[loading="lazy"] {
   max-width: 100%;
   height: auto;
 }
 
-.filter-buttons {
+.buttons {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
-.filter {
+button {
   padding: 0.5rem 1rem;
   border: none;
-  background: #ccc;
+  background-color: #333;
+  color: #fff;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-.course-list {
-  display: grid;
-  gap: 1rem;
+button:hover {
+  background-color: #555;
 }
 
 footer {
-  background: #333;
+  background-color: #333;
   color: #fff;
   text-align: center;
   padding: 1rem;
 }
 
-.social-links a {
+footer .socials a {
   color: #fff;
   margin: 0 0.5rem;
-  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
 }

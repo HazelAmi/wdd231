@@ -1,47 +1,100 @@
-@media screen and (min-width: 768px) {
-  .hamburger {
+/* larger.css */
+
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  #hamburgerBtn {
     display: none;
   }
 
   nav {
-    display: block;
-    
-
-  }
-
-  .nav-links {
     display: flex;
-    justify-content: flex-start;/* aligns items to the left */
+    flex-direction: column;
+    background-color: #333;
   }
 
-  .nav-links li a:hover {
-    background: #555;
+  nav a {
+    border: none;
+    padding: 1rem 2rem;
   }
 
   main {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
   }
-
-  .about-container{
+  .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 10px;
+    gap: 20px;
     background-color: white;
     padding: 10px;
+}
+
+  .grid-container > section {
+    
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
   }
+  h2{
+    background-color: rgb(42, 41, 41);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+  }  
+
+  section {
+    margin-bottom: 3rem;
+  }
+  
   .about {
     grid-column: 1 / span 2;
   }
-  
-
   .photo img {
     width: 300px;
     height: 300px;
     object-fit: cover;
   }
+ .about,.photo{
+  
+  background-color: #f1f1f1;
+  padding: 50px;
+}
+  .buttons {
+    justify-content: flex-start;
+  }
 
-  .course-list, .filter-buttons{
-    grid-template-columns: auto auto auto;
+
+  .social-links {
+    display: flex;
+    text-align: center;
+
+
+    width: 317px;
+    height: 74px;
+
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 2rem;
+  }
+
+  footer .socials {
+    order: 1;
+  }
+
+  footer p {
+    order: 2;
+    margin: 0.5rem 0;
   }
 }
