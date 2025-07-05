@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <meta name="description" content=" A home page for WDD 231 - Web Fronted Development I to demonstrate my prerequisite knowledge by applying HTML and CSS in the design and development. 
+        In addition, JavaScript will be included to provide some dynamic information to the home page.">
+    <meta name="author" content="deinmoere hazel ami alafegha-quakumey">
+    <title>WDD 231 - Web Fronted Development I - Deinmoere Hazel Ami Alafegha-Quakumey</title>
+     <link rel="stylesheet" href="styles/large.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
+
 <body>
-    <h1>WDD 231 - Deinmoere Hazel Ami Alafegha-Quakumey</h1>
+    <header>
+        <img src="https://via.placeholder.com/150x50?text=Logo" alt="Site Logo">
+        
+        <button id="hamburgerBtn" aria-label="Toggle Navigation">&#9776;</button>
+    </header>
+
+    <nav id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="#">Chamber Project</a>
+        <a href="#">Final Project</a>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <div class = "grid-container">
+            <section class = "about">
+                <h2>About Me</h2>
+                <p>Hello everyone, my name is Deinmo. 
+                    Introducing myself is always very interesting because I have a lot of names hehe! Notwithstanding, 
+                    I love the ordeal. I currently live in Accra, Ghana with my younger sister. 
+                    I am super excited about starting this course this term! Looking forward to working with you all.</p>
+            </section>
+
+            <section class = "photo">
+                <h2>Student Photo</h2>
+                <img src="images/moi.jpeg" alt="Student Photo" loading="lazy">
+            </section>
+        
+
+            <section>
+                <h2>Web Certificate Courses</h2>
+                <div class="buttons">
+                    <button data-filter="all">All</button>
+                    <button data-filter="CSE">CSE</button>
+                    <button data-filter="WDD">WDD</button>
+                </div>
+                <div id="coursesContainer"></div>
+                <p id="totalCredits">The total credits for courses listed above is: 0</p>
+            </section>
+        </div>
+
+        <section class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i><img
+                    src="images/InBug-Black.png" alt="LinkedIn" loading="lazy"></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i><img src="images/github-mark.png"
+                    alt="GitHub" loading="lazy"></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i><img
+                    src="images/logo-black.png" alt="X" loading="lazy"></a>
+        </section>
+    </main>
+
+    <footer>
+        
+        <p>&copy; <span id="year"></span> 🌸 Deinmoere Hazel Ami Alafegha-Quakumey 🌸  &bull; Ghana </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

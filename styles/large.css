@@ -1,0 +1,47 @@
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    
+
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-start;/* aligns items to the left */
+  }
+
+  .nav-links li a:hover {
+    background: #555;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+  }
+  .about {
+    grid-column: 1 / span 2;
+  }
+  
+
+  .photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .course-list, .filter-buttons{
+    grid-template-columns: auto auto auto;
+  }
+}
