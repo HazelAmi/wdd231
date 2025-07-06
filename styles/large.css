@@ -1,4 +1,4 @@
-/* larger.css */
+/* large.css */
 
 @media (min-width: 768px) {
   header {
@@ -65,6 +65,9 @@
   background-color: #f1f1f1;
   padding: 50px;
 }
+.course > h2{
+    grid-column: 1 / span 3;
+  }
   .buttons {
     justify-content: flex-start;
   }
@@ -72,29 +75,22 @@
 
   .social-links {
     display: flex;
-    text-align: center;
-
-
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto; 
     width: 317px;
     height: 74px;
 
     gap: 0.5rem;
     margin-bottom: 1rem;
   }
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1.5rem 2rem;
-  }
-
-  footer .socials {
-    order: 1;
+  
+  .course-list, .filter-buttons{
+    grid-template-columns: auto auto auto;
   }
 
   footer p {
-    order: 2;
+    
     margin: 0.5rem 0;
   }
 }

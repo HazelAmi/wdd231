@@ -13,8 +13,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
   padding: 1rem;
 }
 
@@ -69,6 +69,80 @@ img[loading="lazy"] {
   gap: 0.5rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+}/* small.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+}
+
+header img {
+  height: 40px;
+}
+
+#hamburgerBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #444;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #555;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 1rem;
+}
+
+p {
+  font-size: medium;
+}
+section {
+  margin-bottom: 2rem;
+}
+
+img[loading="lazy"] {
+  max-width: 100%;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 button {
@@ -76,6 +150,59 @@ button {
   border: none;
   background-color: #333;
   color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.course-list {
+  display: grid;
+  gap: 1rem;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+} 
+.course-list, .filter-buttons{
+    grid-template-columns: auto auto auto;
+  }
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 317px;
+    height: 74px;
+
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #f1f1f1;
+  color: black;
   cursor: pointer;
   border-radius: 4px;
 }
