@@ -6,9 +6,17 @@
     <meta name="description" content=" A home page for WDD 231 - Web Fronted Development I to demonstrate my prerequisite knowledge by applying HTML and CSS in the design and development. 
         In addition, JavaScript will be included to provide some dynamic information to the home page.">
     <meta name="author" content="deinmoere hazel ami alafegha-quakumey">
+    
+    <meta property="og:title" content="WDD 231 - Home">
+    <meta property="og:description" content="A home page for WDD 231 - Web Fronted Development I to demonstrate my prerequisite knowledge by applying HTML and CSS in the design and development. 
+        In addition, JavaScript will be included to provide some dynamic information to the home page.">
+    <meta property="og:image" content="https://hazelami.github.io/wdd231/images/WDD_Home.png">
+    <meta property="og:locale" content="https://hazelami.github.io/wdd231/index.html">
+
     <title>WDD 231 - Web Fronted Development I - Deinmoere Hazel Ami Alafegha-Quakumey</title>
-     <link rel="stylesheet" href="styles/large.css" />
+    <link rel="stylesheet" href="styles/large.css" />
     <link rel="stylesheet" href="styles/small.css" />
+    <link rel="icon" href="images/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -47,12 +55,12 @@
             </section>
         
 
-            <section>
+            <section class="courses">
                 <h2>Web Certificate Courses</h2>
-                <div class="buttons">
+                <div class="filter-buttons">
                     <button class="filter" data-filter="all">All</button>
-                    <button class="filter" data-filter="CSE">CSE</button>
-                    <button class="filter" data-filter="WDD">WDD</button>
+                    <button class="filter" data-filter="cse">CSE</button>
+                    <button class="filter" data-filter="wdd">WDD</button>
                 </div>
                 <div class="course-list"></div>
                 <p>The total credits for courses listed above is: <span id="total-credits"> 0</span></p>
@@ -75,4 +83,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
