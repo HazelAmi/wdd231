@@ -61,38 +61,65 @@ const courses = [
   }
 ];
 
-function renderCourses(filter = "all") {
-  const container = document.getElementById("course-cards");
-  container.innerHTML = "";
+// function renderCourses(filter = "all") {
+//   const container = document.getElementById("course-cards");
+//   container.innerHTML = "";
 
-  const filtered = filter === "all"
-    ? courses
-    : courses.filter(course => course.subject.toLowerCase() === filter);
+//   const filtered = filter === "all"
+//     ? courses
+//     : courses.filter(course => course.subject.toLowerCase() === filter);
 
-  let totalCredits = 0;
+//   let totalCredits = 0;
 
-  filtered.forEach(course => {
-    const card = document.createElement("div");
-    card.className = "course-card" + (course.completed ? " completed" : "");
-    card.innerHTML = `
-      <h3>${course.subject} ${course.number}</h3>
-      <p><strong>${course.title}</strong></p>
-      <p>${course.description}</p>
-      <p><strong>Credits:</strong> ${course.credits}</p>
-      <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
-    `;
-    container.appendChild(card);
-    totalCredits += course.credits;
-  });
+//   filtered.forEach(course => {
+//     const card = document.createElement("div");
+//     card.className = "course-card" + (course.completed ? " completed" : "");
+//     card.innerHTML = `
+//       <h3>${course.subject} ${course.number}</h3>
+//       <p><strong>${course.title}</strong></p>
+//       <p>${course.description}</p>
+//       <p><strong>Credits:</strong> ${course.credits}</p>
+//       <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
+//     `;
+//     container.appendChild(card);
+//     totalCredits += course.credits;
+//   });
 
-  document.getElementById("total-credits").textContent = totalCredits;
-}
+//   document.getElementById("total-credits").textContent = totalCredits;
+// }
 
-document.querySelectorAll(".filters button").forEach(button => {
-  button.addEventListener("click", () => {
-    renderCourses(button.dataset.filter);
-  });
-});
+// document.querySelectorAll(".filters button").forEach(button => {
+//   button.addEventListener("click", () => {
+//     renderCourses(button.dataset.filter);
+//   });
+// });
 
 // Initial render
-renderCourses();
+//renderCourses();
+
+const courseList = document.querySelector('.course-cards');
+const totalCredits = document.getElementById('total-credits');
+const filterButtons = document.querySelectorAll('.filter');
+
+function displayCourses(filter = 'all') {
+    courseList.innerHTML = '';
+    const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.subject.toLowerCase() === filter);
+    filteredCourses.forEach(course => {
+        const courseDiv = document.createElement('div');
+        courseDiv.className = `course ${course.completed ? 'completed' : ''}`;
+        courseDiv.textContent = `${course.subject} ${course.number}`;
+        courseList.appendChild(courseDiv);
+    });
+    const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+    totalCredits.textContent = total;
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        displayCourses(button.dataset.filter);
+    });
+});
+
+displayCourses();
