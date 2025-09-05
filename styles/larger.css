@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-me, .student-photo {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+  }
+
+  #course-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .course-card {
+    width: calc(33% - 1rem);
+  }
+}
