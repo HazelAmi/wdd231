@@ -11,22 +11,23 @@
     display: none;
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-  }
-
-  nav ul{
-    display: flex;
-  }
-
-  nav a {
-    flex: 0 1 30%; 
-    border: none;
-    padding: 1rem 2rem;
-  }
   
+ /* Navigation */
+  
+#nav-menu {
+    max-height: none;
+}
+
+.nav-links {
+    flex-direction: row;
+}
+
+.nav-links a {
+    border-bottom: none;
+    border-right: 1px solid #444;
+    text-align: center;
+}
+        
   main {
     max-width: 1200px;
     margin: 0 auto;

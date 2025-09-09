@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,77 +8,81 @@
         In addition, JavaScript will be included to provide some dynamic information to the home page.">
     <meta name="author" content="deinmoere hazel ami alafegha-quakumey">
     <title>WDD 231 - Web Fronted Development I - Deinmoere Hazel Ami Alafegha-Quakumey</title>
-    
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
     <header>
-    
+
         <img src="images/logo.jpg" alt="Site Logo" />
-   
+
         <button id="hamburger">&#9776;</button>
     </header>
-    
+
     <nav id="nav-menu">
-      <a href="#">Home</a>
-      <a href="#">Chamber</a>
-      <a href="#">Final</a>
+        <ul class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Chamber Project</a>
+            <a href="#">Final Project</a>
+        </ul>
     </nav>
-  
 
-  <main>
-    <h1>Home</h1>
-    <div class = "grid-container">
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>
-                Hello everyone, my name is Deinmo. 
-                Introducing myself is always very interesting because I have a lot of names hehe! Notwithstanding, 
-                I love the ordeal. I currently live in Accra, Ghana with my younger sister. 
-                I am super excited about starting this course this term! Looking forward to working with you all.
-            </p>
-        </section>
-        <section class="student-photo">
-            <h2>Student Photo</h2>
-            <img src="images/moi.jpeg" alt="Student Photo" loading="lazy">
-        </section>
 
-        <section class="courses">
-            <h2>Web Certificate Courses</h2>
-            <div class="filter-buttons">
-                <button class="filter" data-filter="all">All</button>
-                <button class="filter" data-filter="cse">CSE</button>
-                <button class="filter" data-filter="wdd">WDD</button>
-            </div>
-            <div class="course-cards"></div>
-            <!-- Course cards will be dynamically generated here -->
-            <p>The total credits for courses listed above is: <span id="total-credits">0</span></p>
-        </section>
-    </div>
+    <main>
+        <h1>Home</h1>
+        <div class="grid-container">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    Hello everyone, my name is Deinmo.
+                    Introducing myself is always very interesting because I have a lot of names hehe! Notwithstanding,
+                    I love the ordeal. I currently live in Accra, Ghana with my younger sister.
+                    I am super excited about starting this course this term! Looking forward to working with you all.
+                </p>
+            </section>
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/moi.jpeg" alt="Student Photo" loading="lazy">
+            </section>
 
-    <section class="social-links">
-      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i><img
+            <section class="courses">
+                <h2>Web Certificate Courses</h2>
+                <div class="filter-buttons">
+                    <button class="filter" data-filter="all">All</button>
+                    <button class="filter" data-filter="cse">CSE</button>
+                    <button class="filter" data-filter="wdd">WDD</button>
+                </div>
+                <div class="course-cards"></div>
+                <!-- Course cards will be dynamically generated here -->
+                <p>The total credits for courses listed above is: <span id="total-credits">0</span></p>
+            </section>
+        </div>
+
+        <section class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i><img
                     src="images/linc-black.png" alt="LinkedIn" loading="lazy"></a>
             <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i><img src="images/github-mark.png"
                     alt="GitHub" loading="lazy"></a>
             <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i><img
                     src="images/logo-black.png" alt="X" loading="lazy"></a>
-    </section>
-  </main>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span>🌸 Deinmoere Hazel Ami Alafegha-Quakumey 🌸  &bull; Ghana </p>
-    <p id="lastModified"></p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="currentyear"></span>🌸 Deinmoere Hazel Ami Alafegha-Quakumey 🌸 &bull; Ghana </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
