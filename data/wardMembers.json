@@ -1,0 +1,28 @@
+{
+  "family_name": "Antwi",
+  "move_in_date": "2025-06-20",
+  "number_of_people": 4,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Yaw Antwi",
+      "gender": "Male",
+      "birthdate": "1990-05-15"
+    },
+    {
+      "name": "Mary Antwi",
+      "gender": "Female",
+      "birthdate": "1992-08-20"
+    },
+    {
+      "name": "Ama Antwi",
+      "gender": "Female",
+      "birthdate": "2010-05-03"
+    },
+    {
+      "name": "Kofi Antwi",
+      "gender": "Male",
+      "birthdate": "2012-10-11"
+    }
+  ]
+}
