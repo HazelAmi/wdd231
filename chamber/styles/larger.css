@@ -1,0 +1,6 @@
+/* Large screen styles */
+@media (min-width: 901px) {
+    .hero-content {
+        width: 80%;
+    }
+}

@@ -1,0 +1,76 @@
+{
+  "members": [
+    {
+      "name": "Ghana National Chamber of Commerce and Industry (GNCCI)",
+      "address": "3 Norley Street, NorthDzorwulu, Accra",
+      "phone": "(233) 30-266-2860",
+      "website": "https://ghanachamber.org",
+      "image": "gncci.jpg",
+      "membership": 3,
+      "category": "National Body"
+    },
+    {
+      "name": "Ghana South Africa Business Chamber (GSABC)",
+      "address": "Liberation Road, Accra",
+      "phone": "(233) 30-297-6417",
+      "website": "https://gsabc.org/",
+      "image": "gsabc.jpg",
+      "membership": 3,
+      "category": "Trade and investment"
+    },
+    {
+      "name": "Association of Ghana Industries (AGI)",
+      "address": "2 Morocco Road, Accra",
+      "phone": "(233) 30-261-1610",
+      "website": "https://agiaccra.org",
+      "image": "agi.jpg",
+      "membership": 3,
+      "category": "industrial growth "
+    },
+    {
+      "name": "Ghana India Trade Advisory Chamber (GITAC)",
+      "address": "Kawukudi, Accra",
+      "phone": "(233) 30-222-5151",
+      "website": "https://gitac.org",
+      "image": "gitac.jpg",
+      "membership": 2,
+      "category": "Cultural Exchange "
+    },
+    {
+      "name": "Canadian Chamber of Commerce in Ghana (CCCG)",
+      "address": "35 Djanie Ashie Street,East Legon,Accra.",
+      "phone": "(233) 26-480-8173",
+      "website": "https://www.canada-gh.org/",
+      "image": "cgcc.jpg",
+      "membership": 3,
+      "category": "Cultural Exchange"
+    },
+    {
+      "name": "American Chamber of Commerce Ghana (AmCham Ghana)",
+      "address": "Kaasi Industrial Area, Accra",
+      "phone": "(233) 30-291-2101",
+      "website": "https://amchamghana.org",
+      "image": "amcham.jpg",
+      "membership": 2,
+      "category": "Commercial Ties "
+    },
+    {
+      "name": "Ghana Netherlands Business and Culture Council (GNBCC)",
+      "address": "Airport Residential Area, Accra",
+      "phone": "(233) 30-277-7044",
+      "website": "https://gnbcc.net",
+      "image": "gnbcc.jpg",
+      "membership": 1,
+      "category": "Trade and investment"
+    },
+    {
+      "name": "China Chamber of Commerce in Ghana (CCCG)",
+      "address": "Airport Residential Area, Accra",
+      "phone": "(233) 30-277-7044",
+      "website": "https://www.ghana-chinachamber.org/",
+      "image": "gchcc.jpg",
+      "membership": 1,
+      "category": "Construction"
+    }
+  ]
+}

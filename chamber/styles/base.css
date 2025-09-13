@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+/* Base styles for the chamber directory site */
+:root {
+    --primary-color: #a78c68; /* Ghana green */
+    --secondary-color: #c2b495; /* Ghana red */
+    --accent-color: #fcd116; /* Ghana gold */
+    --text-color: #333;
+    --background-color: #fefefe;
+    --card-background: #ffffff;
+    --footer-background: #3d3730;
+    --footer-text: #ecf0f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--footer-background);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--footer-text);
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo-text span {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    position: relative;
+}
+
+#hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#primary-nav {
+    display: flex;
+    list-style: none;
+}
+
+#primary-nav li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--footer-text);
+    font-weight: 500;
+}
+
+#primary-nav li a:hover,
+#primary-nav li a.active {
+    color: var(--primary-color);
+}
+
+.header-buttons button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Directory Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.view-toggle button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Member Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.member-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.member-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-card p {
+    margin-bottom: 0.5rem;
+}
+
+.member-card a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+.membership-level {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+/* List View */
+.cards.list {
+    grid-template-columns: 1fr;
+}
+
+.cards.list .member-card {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1rem;
+    text-align: left;
+    align-items: center;
+}
+
+.cards.list .member-card img {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-info a {
+    color: var(--footer-text);
+}
+
+.footer-meta {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --text-color: #f8f9fa;
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+}
