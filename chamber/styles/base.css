@@ -2,9 +2,9 @@
 
 /* Base styles for the chamber directory site */
 :root {
-    --primary-color: #a78c68; /* Ghana green */
-    --secondary-color: #c2b495; /* Ghana red */
-    --accent-color: #fcd116; /* Ghana gold */
+    --primary-color: #a78c68; 
+    --secondary-color: #c2b495; 
+    --accent-color: #fcd116; 
     --text-color: #333;
     --background-color: #fefefe;
     --card-background: #ffffff;
