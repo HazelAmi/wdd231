@@ -203,7 +203,9 @@ nav {
     padding: 0.25rem 0.5rem;
     background-color: var(--accent-color);
     color: var(--text-color);
+    text-align: center;
     border-radius: 4px;
+    font-weight: bold;
     font-size: 0.8rem;
     margin-top: 0.5rem;
 }

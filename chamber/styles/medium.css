@@ -3,7 +3,11 @@
     .header-container {
         flex-wrap: wrap;
     }
-    
+    #primary-nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
     .logo-text h1 {
         font-size: 1.2rem;
     }

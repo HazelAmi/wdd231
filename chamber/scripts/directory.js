@@ -35,7 +35,7 @@ function displayMembers(members) {
         let website = document.createElement('a');
         website.setAttribute('href', member.website);
         website.setAttribute('target', '_blank');
-        website.textContent = 'Visit Website';
+        website.textContent = 'Visit Website    ';
         
         let membership = document.createElement('p');
         membership.classList.add('membership-level');
@@ -44,6 +44,7 @@ function displayMembers(members) {
         switch(member.membership) {
             case 1:
                 membership.textContent = 'Member';
+                membership.style.backgroundColor = '#6CB4EE';
                 break;
             case 2:
                 membership.textContent = 'Silver Member';
@@ -51,7 +52,7 @@ function displayMembers(members) {
                 break;
             case 3:
                 membership.textContent = 'Gold Member';
-                membership.style.backgroundColor = '#FFD700';
+                membership.style.backgroundColor = '#FBBC05';
                 break;
         }
         
