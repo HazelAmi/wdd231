@@ -22,3 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+// Dark mode toggle
+document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Mobile menu toggle
+document.getElementById('hamburger-btn').addEventListener('click', () => {
+    document.getElementById('primary-nav').classList.toggle('show');
+});

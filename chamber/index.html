@@ -29,6 +29,7 @@
     
     <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
 </head>
@@ -46,9 +47,9 @@
             <nav>
                 <button id="hamburger-btn">&#9776;</button>
                 <ul id="primary-nav">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
@@ -60,29 +61,85 @@
         </div>
     </header>
 
-    <main class="directory-main">
+    <main>
+        <!-- Hero Section with Slideshow -->
         <div class="hero">
             <picture>
-                <source media="(max-width: 500px)" srcset="images/accra_city.png">
-                <source media="(max-width: 1000px)" srcset="images/accra_city.png">
-                <img src="images/accra_city.png" alt="Accra cityscape" width="1500" height="500">
+                <source media="(max-width: 500px)" srcset="images/accraCity.webp">
+                <source media="(max-width: 1000px)" srcset="images/accraCity.webp">
+                <img src="images/accraCity.webp" alt="Accra cityscape" width="1500" height="500">
             </picture>
             <div class="hero-content">
                 <h2>Accra Business Directory</h2>
                 <p>Discover our members and connect with local businesses</p>
+                <a href="join.html" class="cta-button">Join Now</a>
             </div>
         </div>
 
-        <div class="controls">
-            <h2>Member Directory</h2>
-            <div class="view-toggle">
-                <button id="grid-view" class="active">Grid View</button>
-                <button id="list-view">List View</button>
-            </div>
-        </div>
+        <div class="container">
+            <!-- Events Section -->
+            <section class="events">
+                <h2 class="section-title">Current Events</h2>
+                <div class="event-cards">
+                    <div class="event-card">
+                        <h3>Business Networking Mixer</h3>
+                        <p class="event-date">July 15, 2023 | 6:00 PM</p>
+                        <p>Join us for an evening of networking with local business leaders and entrepreneurs at the Golden Tulip Hotel.</p>
+                    </div>
+                    <div class="event-card">
+                        <h3>Export-Import Workshop</h3>
+                        <p class="event-date">July 22, 2023 | 9:00 AM</p>
+                        <p>Learn how to expand your business internationally with our expert-led workshop on export-import procedures.</p>
+                    </div>
+                    <div class="event-card">
+                        <h3>Digital Marketing Conference</h3>
+                        <p class="event-date">August 5, 2023 | 8:30 AM</p>
+                        <p>Discover the latest digital marketing strategies to grow your business in the digital age.</p>
+                    </div>
+                </div>
+            </section>
 
-        <div id="member-cards" class="cards">
-            <!-- Member cards will be loaded dynamically from JSON -->
+            <!-- Weather Section -->
+            <section class="weather">
+                <h2 class="section-title">Accra Weather</h2>
+                <div class="weather-container">
+                    <div class="current-weather">
+                        <div class="weather-icon">☀️</div>
+                        <div class="temperature">28°C</div>
+                        <div class="weather-desc">Sunny</div>
+                        <div class="weather-humidity">Humidity: 75%</div>
+                        <div class="weather-wind">Wind: 12 km/h</div>
+                    </div>
+                    <div class="forecast">
+                        <h3 class="forecast-title">3-Day Forecast</h3>
+                        <div class="forecast-cards">
+                            <div class="forecast-card">
+                                <div class="forecast-day">Tomorrow</div>
+                                <div class="forecast-icon">🌤️</div>
+                                <div class="forecast-temp">27°C</div>
+                            </div>
+                            <div class="forecast-card">
+                                <div class="forecast-day">Day 2</div>
+                                <div class="forecast-icon">⛅</div>
+                                <div class="forecast-temp">26°C</div>
+                            </div>
+                            <div class="forecast-card">
+                                <div class="forecast-day">Day 3</div>
+                                <div class="forecast-icon">🌦️</div>
+                                <div class="forecast-temp">25°C</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Company Spotlights Section -->
+            <section class="spotlights">
+                <h2 class="section-title">Company Spotlights</h2>
+                <div class="spotlight-cards" id="spotlight-container">
+                    <!-- Spotlights will be loaded dynamically from JSON -->
+                </div>
+            </section>
         </div>
     </main>
 
