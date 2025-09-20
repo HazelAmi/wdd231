@@ -32,6 +32,7 @@
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
 </head>
 <body>
     <header>
@@ -67,8 +68,8 @@
         <div class="slideshow">
             <div class="slide slide-1 active">
                 <picture>
-                    <source media="(max-width: 500px)" srcset="images/accraCity.webp">
-                    <source media="(max-width: 1000px)" srcset="images/accraCity.webp"> 
+                    <source media="(max-width: 500px)" srcset="images/accracity.webp">
+                    <source media="(max-width: 1000px)" srcset="images/accracity.webp"> 
                     <img src="images/accracity.webp" alt="Accra cityscape" width="1500" height="500">
                 </picture>                            
                 <div class="hero-content">
@@ -79,9 +80,9 @@
             </div>
             <div class="slide slide-2">
                 <picture>
-                    <source media="(max-width: 500px)" srcset="images/accraCity.webp">
-                    <source media="(max-width: 1000px)" srcset="images/accraCity.webp"> 
-                    <img src="images/accracity.webp" alt="Accra cityscape" width="1500" height="500">
+                    <source media="(max-width: 500px)" srcset="images/accra_business.jpg">
+                    <source media="(max-width: 1000px)" srcset="images/accra_business.jpg"> 
+                    <img src="images/accra_business.jpg" alt="Accra cityscape" width="1500" height="500">
                 </picture> 
             <div class="hero-content">
                 <h2>Promoting Business Excellence</h2>
@@ -91,9 +92,9 @@
         </div>
         <div class="slide slide-3">
             <picture>
-                <source media="(max-width: 500px)" srcset="images/accraCity.webp">
-                <source media="(max-width: 1000px)" srcset="images/accraCity.webp"> 
-                <img src="images/accracity.webp" alt="Accra cityscape" width="1500" height="500">
+                <source media="(max-width: 500px)" srcset="images/accra_events.webp">
+                <source media="(max-width: 1000px)" srcset="images/accra_events.webp"> 
+                <img src="images/accra_events.webp" alt="Accra cityscape" width="1500" height="500">
             </picture>
             <div class="hero-content">
                 <h2>Networking & Events</h2>
@@ -171,13 +172,11 @@
     </section>
 
     <!-- Company Spotlights Section -->
-    <section class="spotlights">
-        <h2 class="section-title">Company Spotlights</h2>
-        <div class="spotlight-cards" id="spotlight-container">
-            <!-- Spotlights will be loaded dynamically from JSON -->
-        </div>
+    <section class="cards" id="cardsContainer">
+            <h2 class="section-title">Featured Members</h2>
+            <!-- Spotlight cards will be generated here -->
+            
     </section>
-</div>
 </main>
 
 <footer>

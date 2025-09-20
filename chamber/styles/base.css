@@ -164,18 +164,18 @@ nav {
 }
 
 .slide-2 {
-    background-image: url('https://images/accra_city.webp');
+    background-image: url('https://images/accra_business.webp');
 }
 
 .slide-3 {
-    background-image: url('https://images/accra_city.webp');
+    background-image: url('https://images/accra_events.webp');
 }
 
 .cta-button {
     display: inline-block;
     padding: 0.8rem 2rem;
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--footer-text);
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
@@ -373,69 +373,8 @@ nav {
 }
 
 /* Spotlights Section */
-.spotlights {
-    margin-bottom: 3rem;
-}
+ 
 
-.spotlight-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.spotlight-card {
-    background-color: var(--card-background);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.spotlight-card:hover {
-    transform: translateY(-5px);
-}
-
-.spotlight-logo {
-    width: 100px;
-    height: 100px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-}
-
-.spotlight-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.spotlight-card p {
-    margin-bottom: 0.5rem;
-}
-
-.spotlight-card a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.spotlight-card a:hover {
-    text-decoration: underline;
-}
-
-.membership-level {
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-}
 
 /* Directory Controls */
 .controls {
@@ -512,11 +451,18 @@ nav {
     padding: 0.25rem 0.5rem;
     background-color: var(--accent-color);
     color: var(--text-color);
-    text-align: center;
     border-radius: 4px;
-    font-weight: bold;
     font-size: 0.8rem;
     margin-top: 0.5rem;
+}
+.gold {
+    background-color: #FBBC05;
+    color: #5a3f00;
+}
+
+.silver {
+    background-color: #C0C0C0;
+    color: #424242;
 }
 
 /* List View */
@@ -617,8 +563,8 @@ body.dark-mode {
     --card-background: #1e1e1e;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 .weather-container {
     grid-template-columns: 1fr 2fr;
 }
-}
+} */
