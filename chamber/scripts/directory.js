@@ -82,14 +82,44 @@ document.getElementById('list-view').addEventListener('click', () => {
     document.getElementById('member-cards').classList.add('list');
 });
 
-// Dark mode toggle
-// document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-//     document.body.classList.toggle('dark-mode');
-// });
-
-// // Mobile menu toggle
-// document.getElementById('hamburger-btn').addEventListener('click', () => {
-//     document.getElementById('primary-nav').classList.toggle('show');
-// });
 
 getMemberData();
+
+
+// Function to display random spotlights
+function displaySpotlights() {
+    const spotlightContainer = document.getElementById('spotlight-container');
+    spotlightContainer.innerHTML = '';
+
+    // Filter gold and silver members
+    const qualifiedMembers = members.filter(member => member.membership >= 2);
+
+    // Shuffle array to get random order
+    const shuffledMembers = qualifiedMembers.sort(() => 0.5 - Math.random());
+
+    // Select 2-3 members to display
+    const selectedMembers = shuffledMembers.slice(0, Math.floor(Math.random() * 2) + 2);
+
+    selectedMembers.forEach(member => {
+        const card = document.createElement('div');
+        card.classList.add('spotlight-card');
+        
+        card.innerHTML = `
+            <div class="spotlight-logo">${member.category === 'Hospitality' ? '🏨' : member.category === 'Finance' ? '🏦' : member.category === 'Retail' ? '🏪' : '📱'}</div>
+            <h3>${member.name}</h3>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p class="membership-level">${member.membership === 3 ? 'Gold Member' : 'Silver Member'}</p>
+        `;
+        
+        spotlightContainer.appendChild(card);
+    });
+}
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    displaySpotlights();
+    
+});
+
+

@@ -32,3 +32,74 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 document.getElementById('hamburger-btn').addEventListener('click', () => {
     document.getElementById('primary-nav').classList.toggle('show');
 });
+
+
+// Slideshow functionality
+function initSlideshow() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    const prevBtn = document.querySelector('.slide-prev');
+    const nextBtn = document.querySelector('.slide-next');
+    let currentSlide = 0;
+    let slideInterval;
+
+// Function to show a specific slide
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        currentSlide = (n + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+// Function to show next slide
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+// Start autoplay
+    function startSlideshow() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+// Stop autoplay
+    function stopSlideshow() {
+        clearInterval(slideInterval);
+    }
+
+// Event listeners for controls
+    prevBtn.addEventListener('click', () => {
+        stopSlideshow();
+        showSlide(currentSlide - 1);
+        startSlideshow();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        stopSlideshow();
+        nextSlide();
+        startSlideshow();
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            stopSlideshow();
+            showSlide(parseInt(dot.getAttribute('data-slide')));
+            startSlideshow();
+        });
+    });
+
+// Pause slideshow when user hovers over it
+    document.querySelector('.slideshow').addEventListener('mouseenter', stopSlideshow);
+    document.querySelector('.slideshow').addEventListener('mouseleave', startSlideshow);
+
+// Start the slideshow
+    startSlideshow();
+}
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+   
+    initSlideshow();
+});

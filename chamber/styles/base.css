@@ -102,17 +102,19 @@ nav {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section and Slideshow */
 .hero {
     position: relative;
     margin-bottom: 2rem;
+    height: 500px;
+    overflow: hidden;
 }
 
-.hero picture img {
+/* .hero picture img {
     width: 100%;
     height: auto;
     display: block;
-}
+} */
 
 .hero-content {
     position: absolute;
@@ -128,6 +130,118 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-1 {
+    background-image: url('https://images/accra_city.webp');
+}
+
+.slide-2 {
+    background-image: url('https://images/accra_city.webp');
+}
+
+.slide-3 {
+    background-image: url('https://images/accra_city.webp');
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.slide-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-dot.active {
+    background-color: white;
+}
+
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.slide-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slide-prev {
+    left: 20px;
+}
+
+.slide-next {
+    right: 20px;
+}
+
+
 /* Main Content Sections */
 .section-title {
     text-align: center;
@@ -501,4 +615,10 @@ body.dark-mode {
     --text-color: #f8f9fa;
     --background-color: #121212;
     --card-background: #1e1e1e;
+}
+
+@media (min-width: 768px) {
+.weather-container {
+    grid-template-columns: 1fr 2fr;
+}
 }
