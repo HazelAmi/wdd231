@@ -70,71 +70,66 @@ async function getMemberData() {
     }
 }
 // Function to display members
-        function displayMembers(members, spotlightOnly = false) {
-            const container = document.getElementById('cardsContainer');
-            container.innerHTML = '';
-            
-            // Filter members if only spotlight is requested
-            let membersToDisplay = members;
-            if (spotlightOnly) {
-                membersToDisplay = getRandomSpotlightMembers(members);
-            }
-            
-            membersToDisplay.forEach(member => {
-                const card = document.createElement('section');
-                card.className = 'member-card';
-                
-                // Determine membership level text and class
-                let membershipText, membershipClass;
-                if (member.membership === 3) {
-                    membershipText = 'Gold Member';
-                    membershipClass = 'gold';
-                } else if (member.membership === 2) {
-                    membershipText = 'Silver Member';
-                    membershipClass = 'silver';
-                } else {
-                    membershipText = 'Member';
-                    membershipClass = 'member';
-                }
-                
-                card.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>${member.phone}</p>
-                    <p>${member.category}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                    <div class="membership-level ${membershipClass}">${membershipText}</div>
-                `;
-                
-                container.appendChild(card);
-            });
+function displayMembers(members, spotlightOnly = false) {
+    const container = document.getElementById('cardsContainer');
+    container.innerHTML = '';
+    
+    // Filter members if only spotlight is requested
+    let membersToDisplay = members;
+    if (spotlightOnly) {
+        membersToDisplay = getRandomSpotlightMembers(members);
+    }
+    
+    membersToDisplay.forEach(member => {
+        const card = document.createElement('section');
+        card.className = 'member-card';
+        
+        // Determine membership level text and class
+        let membershipText, membershipClass;
+        if (member.membership === 3) {
+            membershipText = 'Gold Member';
+            membershipClass = 'gold';
+        } else if (member.membership === 2) {
+            membershipText = 'Silver Member';
+            membershipClass = 'silver';
+        } else {
+            membershipText = 'Member';
+            membershipClass = 'member';
         }
+        
+        card.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name}">
+            <h3>${member.name}</h3>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <p>${member.category}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+            <div class="membership-level ${membershipClass}">${membershipText}</div>
+        `;
+        
+        container.appendChild(card);
+    });
+}
 
-        // Function to get random spotlight members (gold or silver)
-        function getRandomSpotlightMembers(members) {
-            // Filter to only include gold (3) and silver (2) members
-            const eligibleMembers = members.filter(member => 
-                member.membership === 3 || member.membership === 2
-            );
-            
-            // Shuffle array to get random order
-            const shuffled = [...eligibleMembers].sort(() => 0.5 - Math.random());
-            
-            // Return 2-3 members (if there are enough)
-            return shuffled.slice(0, Math.floor(Math.random() * 2) + 2);
-        }
+// Function to get random spotlight members (gold or silver)
+function getRandomSpotlightMembers(members) {
+    // Filter to only include gold (3) and silver (2) members
+    const eligibleMembers = members.filter(member => 
+        member.membership === 3 || member.membership === 2
+    );
+    
+    // Shuffle array to get random order
+    const shuffled = [...eligibleMembers].sort(() => 0.5 - Math.random());
+    
+    // Return 2-3 members (if there are enough)
+    return shuffled.slice(0, Math.floor(Math.random() * 2) + 2);
+}
 
-        // Initialize the page
-        async function initializePage() {
-            const members = await getMemberData();
-            displayMembers(members, true);
-                      
-            // Dark mode toggle
-            document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-            });
-        }
+// Initialize the page
+async function initializePage() {
+    const members = await getMemberData();
+    displayMembers(members, true);
+}
 
-        // Start the application
-        initializePage();
+// Start the application
+initializePage();
