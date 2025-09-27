@@ -3,4 +3,11 @@
     .hero-content {
         width: 80%;
     }
+
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+    }
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
 }

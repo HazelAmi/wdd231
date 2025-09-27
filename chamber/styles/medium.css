@@ -45,6 +45,10 @@
     #primary-nav.show {
         display: flex;
     }
+
+    .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
     .footer-contact {
         grid-template-columns: 1fr;
