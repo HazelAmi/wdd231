@@ -852,7 +852,7 @@ footer {
 
 /* Dark Mode */
 body.dark-mode {
-    --text-color: #f8f9fa;
+    --text-color: #c2b495;
     --background-color: #121212;
     --card-background: #1e1e1e;
 }
