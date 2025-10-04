@@ -5,7 +5,7 @@
       "address": "3 Norley Street, NorthDzorwulu, Accra",
       "phone": "(233) 30-266-2860",
       "website": "https://ghanachamber.org",
-      "image": "gncci.jpg",
+      "image": "gncci.webp",
       "membership": 3,
       "category": "National Body"
     },
@@ -14,7 +14,7 @@
       "address": "Liberation Road, Accra",
       "phone": "(233) 30-297-6417",
       "website": "https://gsabc.org/",
-      "image": "gsabc.jpg",
+      "image": "gsabc.webp",
       "membership": 3,
       "category": "Trade and investment"
     },
@@ -23,7 +23,7 @@
       "address": "2 Morocco Road, Accra",
       "phone": "(233) 30-261-1610",
       "website": "https://agiaccra.org",
-      "image": "agi.jpg",
+      "image": "agi.webp",
       "membership": 3,
       "category": "industrial growth "
     },
@@ -32,7 +32,7 @@
       "address": "Kawukudi, Accra",
       "phone": "(233) 30-222-5151",
       "website": "https://gitac.org",
-      "image": "gitac.jpg",
+      "image": "gitac.webp",
       "membership": 2,
       "category": "Cultural Exchange "
     },
@@ -41,7 +41,7 @@
       "address": "35 Djanie Ashie Street,East Legon,Accra.",
       "phone": "(233) 26-480-8173",
       "website": "https://www.canada-gh.org/",
-      "image": "cgcc.jpg",
+      "image": "cgcc.webp",
       "membership": 3,
       "category": "Cultural Exchange"
     },
@@ -50,7 +50,7 @@
       "address": "Kaasi Industrial Area, Accra",
       "phone": "(233) 30-291-2101",
       "website": "https://amchamghana.org",
-      "image": "amcham.jpg",
+      "image": "amcham.webp",
       "membership": 2,
       "category": "Commercial Ties "
     },
@@ -59,7 +59,7 @@
       "address": "Airport Residential Area, Accra",
       "phone": "(233) 30-277-7044",
       "website": "https://gnbcc.net",
-      "image": "gnbcc.jpg",
+      "image": "gnbcc.webp",
       "membership": 1,
       "category": "Trade and investment"
     },
@@ -68,7 +68,7 @@
       "address": "Airport Residential Area, Accra",
       "phone": "(233) 30-277-7044",
       "website": "https://www.ghana-chinachamber.org/",
-      "image": "gchcc.jpg",
+      "image": "gchcc.webp",
       "membership": 1,
       "category": "Construction"
     }

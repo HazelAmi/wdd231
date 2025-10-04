@@ -5,56 +5,56 @@
       "name": "Kwame Nkrumah Memorial Park",
       "address": "High Street, Accra",
       "description": "A memorial park dedicated to Ghana's first president, featuring his mausoleum, museum, and beautiful gardens.",
-      "image": "images/nkrumah-mausoleum.jpg"
+      "image": "images/nkrumah-mausoleum.webp"
     },
     {
       "id": 2,
       "name": "Labadi Beach",
       "address": "Labadi, Accra",
       "description": "One of Accra's most popular beaches, known for its vibrant atmosphere, music, and local food vendors.",
-      "image": "images/labadi_beach.jpg"
+      "image": "images/labadi_beach.webp"
     },
     {
       "id": 3,
       "name": "Makola Market",
       "address": "Central Accra",
       "description": "A bustling traditional market offering everything from fresh produce to textiles and household goods.",
-      "image": "images/makola.jpg"
+      "image": "images/makola.webp"
     },
     {
       "id": 4,
       "name": "National Museum of Ghana",
       "address": "Barnes Road, Accra",
       "description": "The largest and oldest museum in Ghana, showcasing the country's history from prehistoric times to present.",
-      "image": "images/national-museum.jpg"
+      "image": "images/national-museum.webp"
     },
     {
       "id": 5,
       "name": "Independence Square",
       "address": "Independence Avenue, Accra",
       "description": "A monumental square built to commemorate Ghana's independence, featuring the Independence Arch and Black Star Gate.",
-      "image": "images/gh-square.jpg"
+      "image": "images/gh-square.webp"
     },
     {
       "id": 6,
       "name": "Jamestown Lighthouse",
       "address": "Jamestown, Accra",
       "description": "Historic lighthouse offering panoramic views of the city and coastline from its observation deck.",
-      "image": "images/james_town.jpg"
+      "image": "images/james_town.webp"
     },
     {
       "id": 7,
       "name": "Arts Centre",
       "address": "28th February Road, Accra",
       "description": "A vibrant marketplace for traditional Ghanaian arts, crafts, textiles, and souvenirs.",
-      "image": "images/accra-arts-center.jpg"
+      "image": "images/accra-arts-center.webp"
     },
     {
       "id": 8,
       "name": "Aburi Botanical Gardens",
       "address": "Aburi, Eastern Region (near Accra)",
       "description": "Beautiful botanical garden established in 1890, featuring exotic plants, trees, and peaceful walking paths.",
-      "image": "images/aburi-gardens.jpeg"
+      "image": "images/aburi-gardens.webp"
     }
   ]
 }
