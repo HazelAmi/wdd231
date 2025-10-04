@@ -10,4 +10,12 @@
     .membership-cards {
         grid-template-columns: 1fr;
     }
+
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
