@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Ghana's top tourist attractions, from historical landmarks to beautiful beaches and cultural heritage sites.">
+    <meta name="author" content="Deinmoere Hazel Ami Alafegha-Quakumey">
+    <title>Ghana Treasures - Explore West Africa's Gem</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Discover Ghana - Explore West Africa's Gem">
+    <meta property="og:description" content="Discover Ghana's top tourist attractions, from historical landmarks to beautiful beaches and cultural heritage sites.">
+    <meta property="og:image" content="https://hazelami.github.io/wdd231/myproject/acc_home_img.png">
+    <meta property="og:url" content="https://hazelami.github.io/wdd231/myproject/index.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->    
+    <link rel="icon" href="images/favicon.ico">
+   
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/attractions.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.webp" alt="Ghana Treasures Logo" width="100" height="100">
+                       </a>
+            
+            <nav>
+                <button id="hamburger-btn">&#9776;</button>
+                <ul id="primary-nav">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="plan.html">Plan Your Trip</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-buttons">
+                <button id="dark-mode-toggle">🌙</button>
+            </div>
+            
+        </div>
+    </header>
+
+<main>
+<!-- Hero Section with Slideshow -->
+    <section class="hero">
+        <div class="slideshow">
+            <div class="slide slide-1 active">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="images/aburi-gardens.webp">
+                    <source media="(max-width: 1000px)" srcset="images/aburi-gardens.webp"> 
+                    <img src="images/aburi-gardens.webp" alt="Accra cityscape" width="1500" height="500">
+                    <div class="caption">Aburi Gardens</div>
+                    
+                </picture>                                           
+                <div class="hero-content">
+                    <h1>Discover the Beauty of Ghana</h1>
+                    <p>Explore West Africa's hidden gem with rich history, vibrant culture, and breathtaking landscapes</p>
+                    <a href="attractions.html" class="cta-button">Explore Attractions</a>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="images/lake-volta.webp">
+                    <source media="(max-width: 1000px)" srcset="images/lake-volta.webp"> 
+                    <img src="images/lake-volta.webp" alt="Accra cityscape" width="1500" height="500">
+                    <div class="caption">Lake Volta</div>
+                </picture> 
+            
+        </div>
+        <div class="slide slide-3">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/cape-coast-castle.webp">
+                <source media="(max-width: 1000px)" srcset="images/cape-coast-castle.webp"> 
+                <img src="images/cape-coast-castle.webp" alt="Accra cityscape" width="1500" height="500">
+                <div class="caption">Cape Coast Castle</div>
+            </picture>
+            
+        </div>
+        
+        <button class="slide-nav slide-prev">&#10094;</button>
+        <button class="slide-nav slide-next">&#10095;</button>
+        
+        <div class="slide-controls">
+            <div class="slide-dot active" data-slide="0"></div>
+            <div class="slide-dot" data-slide="1"></div>
+            <div class="slide-dot" data-slide="2"></div>
+        </div>
+    </div>
+    </section>
+
+    <div class="container">
+
+
+        <section class="about-ghana">
+            <h2>Why Visit Ghana?</h2>
+            <p>Ghana, located in West Africa, offers a rich tapestry of cultural experiences, historical landmarks, and breathtaking natural beauty. From the bustling markets of Accra to the serene beaches along the coast, Ghana welcomes visitors with its famous hospitality.</p>
+            <div class="highlights">
+                <div class="highlight">
+                    <h3>Rich History</h3>
+                    <p>Explore ancient kingdoms and colonial forts that tell the story of Ghana's past.</p>
+                </div>
+                <div class="highlight">
+                    <h3>Natural Beauty</h3>
+                    <p>Discover lush rainforests, wildlife reserves, and pristine beaches.</p>
+                </div>
+                <div class="highlight">
+                    <h3>Vibrant Culture</h3>
+                    <p>Experience traditional festivals, music, dance, and delicious cuisine.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Travel Tips -->
+        <section class="tips-section">
+            <h2>Travel Tips for Ghana</h2>
+            <div class="tips-container">
+                <article class="tip-card">
+                    <h3>Visa Requirements</h3>
+                    <p>Most visitors to Ghana require a visa, which should be obtained before arrival. Check with the Ghanaian embassy in your country for specific requirements.</p>
+                </article>
+                
+                <article class="tip-card">
+                    <h3>Health Precautions</h3>
+                    <p>Yellow fever vaccination is mandatory for entry. Malaria prophylaxis is recommended, and it's advisable to drink bottled water.</p>
+                </article>
+                
+                <article class="tip-card">
+                    <h3>Best Time to Visit</h3>
+                    <p>The dry season (November to March) is generally the best time to visit, with less rainfall and more comfortable temperatures.</p>
+                </article>
+                
+                <article class="tip-card">
+                    <h3>Currency</h3>
+                    <p>The local currency is the Ghanaian Cedi (GHS). Credit cards are accepted in major hotels and restaurants, but cash is essential for markets and smaller establishments.</p>
+                </article>
+                
+                <article class="tip-card">
+                    <h3>Cultural Etiquette</h3>
+                    <p>Ghanaians value respect and politeness. Use your right hand for greetings and eating. Dress modestly, especially when visiting religious sites.</p>
+                </article>
+                
+                <article class="tip-card">
+                    <h3>Transportation</h3>
+                    <p>Domestic flights connect major cities. Tro-tros (minibuses) are a common form of public transport. For convenience, consider hiring a driver.</p>
+                </article>
+            </div>
+        </section>
+       
+     
+         <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Stay Updated</h2>
+                <p>Get the latest travel tips and attraction updates delivered to your inbox.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+    </div>
+</main>
+
+<footer>
+<div class="footer-container">
+    <div class="footer-contact">
+        <div class="footer-logo">
+            <img src="images/logo.webp" alt="Accra Chamber of Commerce Logo" width="80" height="80">            
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Trip</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i><img
+            src="images/linc-white.webp" alt="LinkedIn" loading="lazy" width="25" height="25"></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-youtube"></i><img src="images/yt_icon_white.webp"
+                        alt="YouTube" loading="lazy" width="25" height="25"></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter"></i><img
+            src="images/logo-white.webp" alt="X" loading="lazy" width="25" height="25"></a>
+                
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>info@ghanatreasures.org</p>
+            <p>(233) 27-555-1234</p>
+            <p>📍 <a href="#">Location Map</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-meta">
+        <p>WDD 231 Final Project</p>
+        <p>Deinmoere Hazel Ami Alafegha-Quakumey</p>
+        <p>&copy; <span id="currentyear"></span> Ghana Treasures</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Large screen styles */
+@media (min-width: 901px) {
+    .hero-content {
+        width: 80%;
+    }
+
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+    }
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .amembership-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .modal-details {
+                grid-template-columns: 1fr;
+            }
+}

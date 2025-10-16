@@ -1,0 +1,91 @@
+{
+    "destinations":[
+
+    {
+        "title": "Cape Coast Castle",
+        "image": "images/cape-coast.webp",
+        "location": "Cape Coast, Ghana",
+        "alt": "Cape Coast Castle",
+        "history": "A UNESCO World Heritage site, Cape Coast Castle was a major hub during the transatlantic slave trade.",
+        "highlights": "Explore the dungeons, the Door of No Return, and the museum.",
+        "tips": "Guided tours are available; visit early to avoid crowds."
+    },
+    {
+        "title": "Kakum National Park",
+        "image": "images/kakum-park.webp",
+        "location": "Odumase Abrafo, Central Region",
+        "alt": "Kakum National Park canopy walkway",
+        "history": "Established in 1992, this park protects a tropical rainforest.",
+        "highlights": "Walk the famous canopy walkway 30 meters above the forest floor.",
+        "tips": "Wear comfortable shoes; the canopy walk takes about an hour."
+    },
+    {
+        "title": "Mole National Park",
+        "image": "images/mole-park.webp",
+        "location": "Volta Region",
+        "alt": "Mole National Park wildlife",
+        "history": "Ghana’s largest wildlife refuge, founded in 1958.",
+        "highlights": "Spot elephants, antelopes, and over 300 bird species on a safari.",
+        "tips": "Best visited during the dry season (December to April)."
+    },
+    {
+        "title": "Elmina Castle",
+        "image": "images/elmina.webp",
+        "location": "Volta Region",
+        "alt": "Lake Volta scenery",
+        "history": "Built by the Portuguese in 1482, Elmina Castle is a UNESCO World Heritage Site and one of the oldest European buildings in sub-Saharan Africa. Explore its haunting dungeons and learn about its role in the transatlantic slave trade.",
+        "highlights": "Stunning ocean views from the castle ramparts.",
+        "tips": "Hire a local guide for the best experience."
+    },
+{
+        "title": "Larabanga Mosque",
+        "image": "images/larabanga.webp",
+        "location": "Volta Region",
+        "alt": "Larabanga Mosque",
+        "history": "Known as the “Mecca of West Africa,” this 15th-century mosque is Ghana’s oldest and one of West Africa’s most ancient. Its unique Sudano-Sahelian architecture is a must-see.  ",
+        "highlights": "Rare chance to view a centuries-old Qur’an.",
+        "tips": "Guided tours are available; visit early to avoid crowds."
+    },
+    {
+        "name": "Wli Waterfall",
+        "image": "images/wli-falls.webp",
+        "location": "Volta Region",
+        "history": "Ghana's highest waterfall, nestled in lush greenery, offers a refreshing escape. Hike to the upper and lower falls for breathtaking views and a chance to spot bats in nearby caves.",
+        "highlights": "Swim in the cool plunge pool.",
+        "visitorTips": "Guided tours are available; visit early to avoid crowds."
+    },
+    {
+        "name": "Mount Afadja (Afadjato)",
+        "image": "images/afadjato.webp",
+        "location": "Volta Region, near Liati Wote",
+        "history": "At 885m, Ghana's highest peak offers a rewarding hike with panoramic views of Volta Lake, forests, and villages. Over 300 butterfly species and 33 mammals thrive here.",
+        "highlights": "Stunning summit vistas.",
+        "visitorTips": "Wear comfortable shoes; it is quite a walk."
+    },
+    {
+        "name": "Eli Beach Resort",
+        "image": "images/eli-resort.webp",
+        "location": "Near Accra",
+        "history": "A perfect coastal getaway with pristine beaches, water sports, and vibrant nightlife.",
+        "highlights": "Family-friendly beach activities.",
+        "visitorTips": "Best visited during the dry season (December to April)."
+    },
+    {
+        "name": "Lakeside Marine Entertainment Park",
+        "image": "images/lakeside.webp",
+        "location": "Accra",
+        "history": "Featuring a 600m² splash pool, aquarium, and clubhouse, this park offers fun for all ages. Host events or unwind in a vibrant, safe setting.",
+        "highlights": "Kid-friendly water attractions.",
+        "visitorTips": "Best visited during the dry season (December to April)."
+    },
+    {
+        "name": "Treasure Island, Ada",
+        "image": "images/eli-resort.webp",
+        "location": "Ada Foah, Greater Accra",
+        "history": "This serene island on the Volta River is ideal for water sports, fishing, and relaxation. Its eco-friendly vibe makes it one of Ghana's finest escapes.",
+        "highlights": "Kayaking and turtle-watching tours.",
+        "visitorTips": "Best visited during the dry season (December to April)."
+    }
+    
+    ]
+}

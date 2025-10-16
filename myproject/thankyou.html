@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Ghana's top tourist attractions, from historical landmarks to beautiful beaches and cultural heritage sites.">
+    <meta name="author" content="Deinmoere Hazel Ami Alafegha-Quakumey">
+    <title>Ghana Treasures - Explore West Africa's Gem</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Discover Ghana - Explore West Africa's Gem">
+    <meta property="og:description" content="Discover Ghana's top tourist attractions, from historical landmarks to beautiful beaches and cultural heritage sites.">
+    <meta property="og:image" content="https://hazelami.github.io/wdd231/myproject/acc_home_img.png">
+    <meta property="og:url" content="https://hazelami.github.io/wdd231/myproject/index.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->    
+    <link rel="icon" href="images/favicon.ico">
+   
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/attractions.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.webp" alt="Ghana Treasures Logo" width="100" height="100">
+                <!-- <div class="logo-text">
+                    <h2> Ghana <span>Treasures</span></h2>
+                    
+                </div> -->
+            </a>
+            
+            <nav>
+                <button id="hamburger-btn">&#9776;</button>
+                <ul id="primary-nav">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="plan.html">Plan Your Trip</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-buttons">
+                <button id="dark-mode-toggle">🌙</button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="thankyou-container">
+            <div class="thankyou-icon">✓</div>
+            <h1 class="thankyou-title">Here's your Itenary!</h1>
+            <p class="thankyou-message">We've received your travel preferences and have helped you create the perfect itinerary.</p>
+            
+            <div class="application-details">
+                <h3>Itinerary Summary</h3>
+                <div id="application-details-content">
+                    <!-- Application details will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <a href="index.html" class="back-home">Return to Homepage</a>
+        </div>
+    </main>
+
+    <footer>
+<div class="footer-container">
+    <div class="footer-contact">
+        <div class="footer-logo">
+            <img src="images/logo.webp" alt="Accra Chamber of Commerce Logo" width="80" height="80">            
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="plan.html">Plan Your Trip</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i><img
+            src="images/linc-white.webp" alt="LinkedIn" loading="lazy" width="25" height="25"></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-youtube"></i><img src="images/yt_icon_white.webp"
+                        alt="YouTube" loading="lazy" width="25" height="25"></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter"></i><img
+            src="images/logo-white.webp" alt="X" loading="lazy" width="25" height="25"></a>
+                
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>info@ghanatreasures.org</p>
+            <p>(233) 27-555-1234</p>
+            <p>📍 <a href="#">Location Map</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-meta">
+        <p>WDD 231 Final Project</p>
+        <p>Deinmoere Hazel Ami Alafegha-Quakumey</p>
+        <p>&copy; <span id="currentyear"></span> Ghana Treasures</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Ghana's top tourist attractions, from historical landmarks to beautiful beaches and cultural heritage sites.">
+    <meta name="author" content="Deinmoere Hazel Ami Alafegha-Quakumey">
+   <title>Plan Your Ghana Trip - Travel Guide & Itineraries | Ghana Treasures</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Discover Ghana - Explore West Africa's Gem">
+    <meta property="og:description" content="Discover Ghana's top tourist attractions, from historical landmarks to beautiful beaches and cultural heritage sites.">
+    <meta property="og:image" content="https://hazelami.github.io/wdd231/myproject/acc_home_img.png">
+    <meta property="og:url" content="https://hazelami.github.io/wdd231/myproject/index.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->    
+    <link rel="icon" href="images/favicon.ico">
+   
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/attractions.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.webp" alt="Ghana Treasures Logo" width="100" height="100">
+                
+            </a>
+            
+            <nav>
+                <button id="hamburger-btn">&#9776;</button>
+                <ul id="primary-nav">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="plan.html" class="active">Plan Your Trip</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-buttons">
+                <button id="dark-mode-toggle">🌙</button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="join-main">
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/labadi_beach.webp">
+                <source media="(max-width: 1000px)" srcset="images/labadi_beach.webp">
+                <img src="images/labadi_beach.webp" alt="Labadi" width="1500" height="500">
+
+            </picture>
+            
+        </div>
+
+        <div class="container">
+            <h2 class="section-title">Custom Trip Planner</h2>
+            
+            <div class="join-container">
+                <!-- Planner Form -->
+                <div class="planner-form">
+                    <form id="trip-planner-form" method="get" action="thankyou.html">
+                        <div class="form-group">
+                            <label for="travel-date">Preferred Travel Date</label>
+                            <input type="date" id="travel-date" name="travel-date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="trip-duration">Trip Duration (days)</label>
+                            <select id="trip-duration" name="trip-duration" required>
+                                <option value="">Select duration</option>
+                                <option value="3-5">3-5 days</option>
+                                <option value="6-10">6-10 days</option>
+                                <option value="11-14">11-14 days</option>
+                                <option value="15+">15+ days</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <input type="number" id="travelers" name="travelers" min="1" max="20" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interests">Primary Interests</label>
+                            <select id="interests" name="interests" required>
+                                <option value="">Select interests</option>
+                                <option value="history">History & Culture</option>
+                                <option value="nature">Nature & Wildlife</option>
+                                <option value="beach">Beaches & Relaxation</option>
+                                <option value="adventure">Adventure & Hiking</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select budget</option>
+                                <option value="budget">Budget ($50-100/day)</option>
+                                <option value="moderate">Moderate ($100-200/day)</option>
+                                <option value="luxury">Luxury ($200+/day)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="accommodation">Accommodation Preference</label>
+                            <select id="accommodation" name="accommodation" required>
+                                <option value="">Select preference</option>
+                                <option value="hotel">Hotels</option>
+                                <option value="guesthouse">Guesthouses</option>
+                                <option value="resort">Resorts</option>
+                                <option value="eco">Eco-lodges</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special-requirements">Special Requirements</label>
+                            <textarea id="special-requirements" name="special-requirements" rows="4" placeholder="Any dietary restrictions, mobility needs, or special requests..."></textarea>
+                        </div>
+                        
+                        <input type="hidden" id="timestamp" name="timestamp">
+                        
+                        <button type="submit" class="submit-btn">Get My Itinerary</button>
+                    </form>
+                </div>
+                
+                <!-- Accommodation Cards -->
+                <div class="membership-cards">
+                    <div class="membership-card">
+                        <h3>Eco-lodges 🌿</h3>
+                        <div class="price">Sustainable accommodations</div>
+                        <ul class="benefits">
+                            <li>Eco-friendly</li>
+                            <li>Nature Immersion</li>
+                            <li>Sustainable</li>
+                        </ul>
+                        <button class="modal-btn" data-modal="np-modal">Learn More</button>
+                    </div>
+                    
+                    <div class="membership-card">
+                        <h3>Guesthouses 🏠</h3>
+                        <div class="price">Cozy, budget-friendly accommodations</div>
+                        <ul class="benefits">
+                            <li>Home-cooked Meals</li>
+                            <li>Local Experience</li>
+                            <li>Affordable</li>
+                        </ul>
+                        <button class="modal-btn" data-modal="bronze-modal">Learn More</button>
+                    </div>
+                    
+                    <div class="membership-card">
+                        <h3>Hotels 🏨</h3>
+                        <div class="price">Comfortable accommodations</div>
+                        <ul class="benefits">
+                            <li>Room Service</li>
+                            <li>Concierge</li>
+                            <li>Business Center</li>
+                        </ul>
+                        <button class="modal-btn" data-modal="silver-modal">Learn More</button>
+                    </div>
+                    
+                    <div class="membership-card">
+                        <h3>Resorts 🏖️</h3>
+                        <div class="price">Luxury accommodations</div>
+                        <ul class="benefits">
+                            <li>Swimming Pools</li>
+                            <li>Spa Services</li>
+                            <li>Entertainment</li>
+                        </ul>
+                        <button class="modal-btn" data-modal="gold-modal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modals -->
+        <!-- Modal for Eco-lodges -->
+    <div id="eco-lodges-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Eco-lodges in Ghana</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Eco-lodge in Ghana" class="modal-image">
+                <p>Eco-lodges in Ghana focus on sustainability and environmental responsibility while providing unique accommodations immersed in nature, from rainforest retreats to beachside sanctuaries.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-section">
+                        <h3>Features & Amenities</h3>
+                        <ul>
+                            <li>Sustainable building materials</li>
+                            <li>Solar power and rainwater harvesting</li>
+                            <li>Organic gardens and farm-to-table dining</li>
+                            <li>Nature guides and educational programs</li>
+                            <li>Minimal environmental impact</li>
+                            <li>Community involvement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Ideal For</h3>
+                        <ul>
+                            <li>Eco-conscious travelers</li>
+                            <li>Nature enthusiasts</li>
+                            <li>Adventure seekers</li>
+                            <li>Educational trips</li>
+                            <li>Those seeking tranquility</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-range">Price Range: $50 - $200 per night</div>
+                
+                <button class="booking-btn">Find Available Eco-lodges</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Guesthouses -->
+    <div id="guesthouses-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Guesthouses in Ghana</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Guesthouse in Ghana" class="modal-image">
+                <p>Guesthouses offer a more intimate and personalized accommodation experience, often family-run with attention to local culture and hospitality.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-section">
+                        <h3>Features & Amenities</h3>
+                        <ul>
+                            <li>Home-cooked local meals available</li>
+                            <li>Personalized service from hosts</li>
+                            <li>Common areas for socializing</li>
+                            <li>Local cultural experiences</li>
+                            <li>Often located in residential areas</li>
+                            <li>Budget-friendly pricing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Ideal For</h3>
+                        <ul>
+                            <li>Budget-conscious travelers</li>
+                            <li>Cultural immersion seekers</li>
+                            <li>Solo travelers</li>
+                            <li>Long-term stays</li>
+                            <li>Those wanting local insights</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-range">Price Range: $20 - $80 per night</div>
+                
+                <button class="booking-btn">Find Available Guesthouses</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Hotels -->
+    <div id="hotels-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Hotels in Ghana</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Hotel in Ghana" class="modal-image">
+                <p>Hotels in Ghana range from international luxury chains to comfortable local establishments, offering a wide variety of amenities and services for both business and leisure travelers.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-section">
+                        <h3>Features & Amenities</h3>
+                        <ul>
+                            <li>24-hour front desk and room service</li>
+                            <li>Restaurants and bars on-site</li>
+                            <li>Business centers and meeting facilities</li>
+                            <li>Swimming pools and fitness centers</li>
+                            <li>Concierge services</li>
+                            <li>Wi-Fi throughout the property</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Ideal For</h3>
+                        <ul>
+                            <li>Business travelers</li>
+                            <li>Families on vacation</li>
+                            <li>Couples seeking comfort</li>
+                            <li>Short-term stays</li>
+                            <li>Conference attendees</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-range">Price Range: $80 - $400+ per night</div>
+                
+                <button class="booking-btn">Find Available Hotels</button>
+            </div>
+        </div>
+    </div>
+     <!-- Modal for Resorts -->
+    <div id="resorts-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Resorts in Ghana</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Resort in Ghana" class="modal-image">
+                <p>Ghana's resorts offer luxurious accommodations with extensive amenities, often located in beautiful beachfront or natural settings with comprehensive recreational facilities.</p>
+                
+                <div class="modal-details">
+                    <div class="detail-section">
+                        <h3>Features & Amenities</h3>
+                        <ul>
+                            <li>Multiple swimming pools</li>
+                            <li>Spa and wellness centers</li>
+                            <li>Multiple dining options</li>
+                            <li>Recreational activities and entertainment</li>
+                            <li>Private beach access</li>
+                            <li>Kids clubs and family activities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Ideal For</h3>
+                        <ul>
+                            <li>Luxury seekers</li>
+                            <li>Honeymooners</li>
+                            <li>Family vacations</li>
+                            <li>All-inclusive experiences</li>
+                            <li>Special occasions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="price-range">Price Range: $150 - $600+ per night</div>
+                
+                <button class="booking-btn">Find Available Resorts</button>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <div class="footer-logo">
+                    <img src="images/logo.webp" alt="Accra Chamber of Commerce Logo" width="80" height="80">            
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="plan.html">Plan Your Trip</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i><img
+                    src="images/linc-white.webp" alt="LinkedIn" loading="lazy" width="25" height="25"></a>
+                        <a href="https://github.com/" target="_blank"><i class="fab fa-youtube"></i><img src="images/yt_icon_white.webp"
+                                alt="YouTube" loading="lazy" width="25" height="25"></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter"></i><img
+                    src="images/logo-white.webp" alt="X" loading="lazy" width="25" height="25"></a>
+                        
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p>info@ghanatreasures.org</p>
+                    <p>(233) 27-555-1234</p>
+                    <p>📍 <a href="#">Location Map</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-meta">
+                <p>WDD 231 Final Project</p>
+                <p>Deinmoere Hazel Ami Alafegha-Quakumey</p>
+                <p>&copy; <span id="currentyear"></span> Ghana Treasures</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+        </div>
+        </footer>
+</body>
+</html
